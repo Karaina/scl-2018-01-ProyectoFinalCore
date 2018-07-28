@@ -17,3 +17,4 @@ function mostrarImgYNombre(first_name, img){
     p.appendChild(textop);
     contenedorp.appendChild(p);
 }
+ 

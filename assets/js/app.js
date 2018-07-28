@@ -1,55 +1,52 @@
-// Función para el input del registro de la hora
-$('.timepicker').pickatime({
-    default: 'now',
-    twelvehour: false, 
-    donetext: 'OK',
-  autoclose: false,
-  vibrate: true 
-});
+const tblUsers = document.getElementById('users_table');
+const databaseRef = firebase.database().ref('users/');
+let rowIndex = 1;
+  
+databaseRef.once('value', function(snapshot) {    
+    snapshot.forEach(function(childSnapshot) {
+        let childData = childSnapshot.val();
+  
+        var row = tblUsers.insertRow(rowIndex);
+        var cellName = row.insertCell(0);
+        var cellLastName = row.insertCell(1);
+        var cellEmploy = row.insertCell(2);
+        var cellEmail = row.insertCell(3);
+   
+        cellName.appendChild(document.createTextNode(childData.first_name));
+        cellLastName.appendChild(document.createTextNode(childData.last_name));
+        cellEmploy.appendChild(document.createTextNode(childData.employ));
+        cellEmail.appendChild(document.createTextNode(childData.email));
 
-// Registro de usuario
-function registerWithFirebase() {
-    const emailValue = email.value;
-    const passwordValue = password.value;
-    const first_name = firstname.value;
-    const last_name = lastname.value;
-    const time = time.value;
-    const employment = employment.value;
-    const uid = firebase.database().ref().child('users').push().key;
+        rowIndex = rowIndex + 1;
+    });
+  });
+   
+function save_user(){
+    const first_name = document.getElementById('first_name').value;
+    const last_name = document.getElementById('last_name').value;
+    const emailValue = document.getElementById('email').value;
+    const employment = document.getElementById('employment').value;
 
-    firebase.auth().createUserWithEmailAndPassword(emailValue, passwordValue)
-    .then(() => {
-        console.log("Usuario registrado con éxito");
-        const data = {
-            user_id: uid,
-            first_name: first_name,
-            last_name: last_name,
-            email: emailValue,
-            time: time.value,
-            employ: employment.value
-        }
-        const updates = {};
-        updates['/users/' + uid] = data;
-        firebase.database().ref().update(updates)
-    
-        console.log("se guardó el usuario")
-     })
-    .catch((error) => {
-        console.log("Error de firebase > Código > "+error.code);
-        console.log("Error de firebase > Mensaje > "+error.message);
-     });
-} 
-
-function update_user(){
-    var user_name = document.getElementById('user_name').value;
-    var user_id = document.getElementById('user_id').value;
- 
+    var uid = firebase.database().ref().child('users').push().key;
+  
     var data = {
-     user_id: user_id,
-     user_name: user_name
+    user_id: uid,
+        first_name: first_name,
+        last_name: last_name,
+        email: emailValue,
+        //time: time.value,
+        employ: employment
     }
-    
-    var updates = {};
-    updates['/users/' + user_id] = data;
-    firebase.database().ref().update(updates);  
-   }
+   
+   var updates = {};
+   updates['/users/' + uid] = data;
+   firebase.database().ref().update(updates);
+   
+   reload_page();
+  }
+  
+  function reload_page(){
+   window.location.reload();
+  }
+  
+
