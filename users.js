@@ -1,14 +1,3 @@
-//Para tener una nueva llave en la colección messages
-const newUser = firebase.database().ref().child('usuarios').push().key;
-    
-    firebase.database().ref(`usuarios/${newUserKey}`).set({
-        creator : currentUser.uid,
-        creatorName : currentUser.displayName,
-    });
- 
-
-
-
 function mostrarImgYNombre(nombre, img){
     
     let contenedor = document.getElementById('contenedor');
@@ -23,9 +12,6 @@ function mostrarImgYNombre(nombre, img){
     imgNavbar.setAttribute('src', img);
     imgNavbar.className = 'imgnavbar';
     
-   
-
-
     contNavbar.appendChild(imgNavbar);
     contenedor.appendChild(imge);
     p.appendChild(textop);

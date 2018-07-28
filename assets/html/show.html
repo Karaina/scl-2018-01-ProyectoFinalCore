@@ -29,6 +29,34 @@
                       <div id="imguser"></div>
                     </div>
             </section>
+
+
+            <table>
+                <tr>
+                    <td>Id: </td>
+                    <td>
+                        <input type="text" name="id" id="user_id">
+                    </td>
+                </tr>
+                <tr>
+                    <td>User Name:</td>
+                    <td>
+                        <input type="text" name="user_name" id="user_name">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" value="save" onclick="saveUser() ;">
+                    </td>
+                </tr>
+            </table>
+
+            <table id="tbl_users_list">
+                <tr>
+                    <td>#ID</td>
+                    <td>Name</td>
+                </tr>
+            </table>
     
 
     <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
@@ -50,6 +78,7 @@
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
-    <script src="mostrarUsuarios.js"></script>
+    <script src="/users.js"></script>
+    <script src="/assets/js/app.js"></script>
 </body>
 </html>
