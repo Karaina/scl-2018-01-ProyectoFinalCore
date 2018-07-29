@@ -13,6 +13,14 @@ function cliente() {
     window.location.href = "../html/cliente.html";
 }
 
+function proveeder() {
+    window.location.href = "../html/cliente.html";
+}
+
+function visita() {
+    window.location.href = "../html/cliente.html";
+}
+
 function search() {
     window.location.href = "../html/registrodatos.html"
 }
@@ -69,6 +77,12 @@ function checkRut(rut) {
     rut.setCustomValidity('');
 }
 
+
+// Elegir empresa para visitar
+function getSelectedValue() {
+    let selectedValue = document.getElementById('selector').value;
+    console.log(selectedValue);
+}
 
 // Guardar datos en la data firebase
 function save_user(){
