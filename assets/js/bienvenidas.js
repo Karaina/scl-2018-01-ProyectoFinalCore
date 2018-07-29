@@ -72,10 +72,16 @@ function checkRut(rut) {
 
 // Guardar datos en la data firebase
 function save_user(){
+    const alerts = document.getElementById("alert");
     const name = document.getElementById('first_name').value;
     const surname = document.getElementById('last_name').value;
     const rut = document.getElementById('rut').value;
     const motivoVisita = document.getElementById('motivo').value;
+
+    if(name, surname, rut, motivoVisita === '') {
+        alerts.innerHTML = `<p class= "alert">Debe llenar todos los campos, son obligatorios.</p>`;
+    }
+
     let date = new Date();
     let tiempo = date.getHours() + ":" + date.getMinutes();
     let days = date.getDate() + "." + date.getMonth() + "." + date.getFullYear();
