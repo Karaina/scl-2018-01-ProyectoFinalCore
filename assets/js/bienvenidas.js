@@ -76,6 +76,9 @@ function save_user(){
     const surname = document.getElementById('last_name').value;
     const rut = document.getElementById('rut').value;
     const motivoVisita = document.getElementById('motivo').value;
+    let date = new Date();
+    let tiempo = date.getHours() + ":" + date.getMinutes();
+    let days = date.getDate() + "." + date.getMonth() + "." + date.getFullYear();
 
     var uid = firebase.database().ref().child('users').push().key;
   
@@ -84,7 +87,9 @@ function save_user(){
         nombre: name,
         apellido: surname,
         rut: rut,
-        motivo: motivoVisita
+        motivo: motivoVisita,
+        hora: tiempo,
+        fecha: days
     }
    
    var updates = {};
