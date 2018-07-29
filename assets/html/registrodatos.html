@@ -33,9 +33,24 @@
                 </td>
             </tr>
             <td> 
-              <input type="button"  value="Save" onclick="save_user();" />
+              <input type="button"  value="Save" onclick="save_user() ;"/>
             </td>            
            </table>
+
+
+           <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+           <script>
+           // Initialize Firebase
+           var config = {
+           apiKey: "AIzaSyD9CVMZg_zkd6vf5LbN24sMvreaNBYfHLM",
+           authDomain: "registro-66ed1.firebaseapp.com",
+           databaseURL: "https://registro-66ed1.firebaseio.com",
+           projectId: "registro-66ed1",
+           storageBucket: "",
+           messagingSenderId: "746472447594"
+           };
+           firebase.initializeApp(config);
+           </script>   
 
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>

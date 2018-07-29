@@ -1,3 +1,4 @@
+//Función para el selector de empresas del if
 $(document).ready(function(){
     $('select').formSelect();
   });
@@ -67,3 +68,27 @@ function checkRut(rut) {
     // Si todo sale bien, eliminar errores (decretar que es válido)
     rut.setCustomValidity('');
 }
+
+
+// Guardar datos en la data firebase
+function save_user(){
+    const name = document.getElementById('first_name').value;
+    const surname = document.getElementById('last_name').value;
+    const rut = document.getElementById('rut').value;
+    const motivoVisita = document.getElementById('motivo').value;
+
+    var uid = firebase.database().ref().child('users').push().key;
+  
+    var data = {
+    user_id: uid,
+        nombre: name,
+        apellido: surname,
+        rut: rut,
+        motivo: motivoVisita
+    }
+   
+   var updates = {};
+   updates['/users/' + uid] = data;
+   firebase.database().ref().update(updates);
+   
+  }
