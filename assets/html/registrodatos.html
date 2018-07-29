@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>Paso 3/3: Registre sus datos</h2>
+    <table>
+            <tr>
+             <td>Nombre: </td>
+             <td><input type="text" name="first_name" id="first_name" /></td>
+            </tr>
+            <td>Apellido:</td>
+            <td><input type="text" name="last_name" id="last_name"></td>
+            <tr> 
+            <td>Rut:</td>
+            <td> 
+            <input type="text" id="rut" name="rut" required oninput="checkRut(this)" placeholder="Ingrese RUT">
+            <button type="submit">Validar RUT</button>
+        </td>
+        </tr>
+            <tr>
+                <td>Motivo</td>
+                <td>
+                    <input type="text" name="motivo" id="motivo">
+                </td>
+            </tr>
+            <td> 
+              <input type="button"  value="Save" onclick="save_user();" />
+            </td>            
+           </table>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+        <script src="../js/bienvenidas.js"></script>
+</body>
+</html>

@@ -2,7 +2,6 @@ const tblUsers = document.getElementById('users_table');
 const databaseRef = firebase.database().ref('users/');
 let rowIndex = 1;
   
-
 databaseRef.once('value', function(snapshot) {    
     snapshot.forEach(function(childSnapshot) {
         let childData = childSnapshot.val();
