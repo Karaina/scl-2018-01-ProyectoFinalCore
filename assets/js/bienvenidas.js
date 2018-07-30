@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 // Reedirección de vistas
 function register() {
-    window.location.href = "../html/tipoVisita.html";
+    window.location.href = "/assets/html/tipoVisita.html";
 }
 
 function cliente() {
@@ -78,6 +78,25 @@ function search() {
     let x = document.getElementById('selector').selectedIndex;
     let y = document.getElementsByTagName('option')[x].value;
     console.log(y);
+    
+    var data = {
+        empresa: y
+      };
+    
+      // Get a key for a new Post.
+      
+    
+      // Write the new post's data simultaneously in the posts list and the user's post list.
+      var updates = {};
+      updates['/users/' ] = data;
+      updates['/user-posts/'] = data;
+
+
+
+    var updates = {};
+    updates['/users/'] = data;
+  
+
     window.location.href = "../html/registrodatos.html"
 }
 
@@ -109,7 +128,6 @@ function save_user(){
         apellido: surname,
         rut: rut,
         motivo: motivoVisita,
-        //empresa: coso,
         hora: tiempo,
         fecha: days
     }
