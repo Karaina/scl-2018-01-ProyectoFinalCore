@@ -23,3 +23,31 @@ function snap() {
     canvas.height = video.clientHeight;
     context.drawImage(video, 0, 0);
 }
+
+function subirArchivo(archivo) {
+    const data = firebase.auth().users;
+    let storageService = firebase.storage();
+    // creo una referencia al lugar donde guardaremos el archivo
+    let refStorage = storageService.ref('images').child(data.uid + archivo.name);
+    // Comienzo la tarea de upload
+    const uploadTask = refStorage.put(archivo);
+
+    // defino un evento para saber qué pasa con ese upload iniciado
+    uploadTask.on('state_changed', null,
+        function(error){
+            console.log('Error al subir el archivo', error);
+        },
+        function(){
+            //obtiene la url de la imagen recien subida
+            uploadTask.snapshot.ref.getDownloadURL().then(function(downloadURL) {
+                //cambia el source de la imagen por la url de la imagen recien subida
+                document.getElementById('imgReview').src = downloadURL;
+              });
+        }
+    );
+}
+
+function save_picture(picture, key) {
+    firebase.database().ref(`users/${newReviewKey}`).set({})
+}
+
