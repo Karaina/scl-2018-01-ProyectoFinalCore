@@ -100,9 +100,10 @@ function search() {
     window.location.href = "../html/registrodatos.html"
 }
 
-
+let ama = '';
 // Guardar datos en la data firebase
-function save_user(){
+function save_user(redirect){
+    if(redirect == true) { 
     const alerts = document.getElementById("alert");
     const name = document.getElementById('first_name').value;
     const surname = document.getElementById('last_name').value;
@@ -135,5 +136,7 @@ function save_user(){
    var updates = {};
    updates['/users/' + uid] = data;
    firebase.database().ref().update(updates);
-   
-  }
+}
+   window.location.href = '/assets/html/registrado.html';
+  
+}
