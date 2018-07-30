@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 // Reedirección de vistas
 function register() {
-    window.location.href = "/assets/html/tipoVisita.html";
+    window.location.href = "../html/tipoVisita.html";
 }
 
 function cliente() {
