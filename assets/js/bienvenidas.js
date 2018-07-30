@@ -137,4 +137,3 @@ function save_user(){
    firebase.database().ref().update(updates);
 
   }
-0
