@@ -1,0 +1,38 @@
+
+
+  body {
+    padding: 20px;
+    background: url("../img/R7A4171.jpg");
+   background-size:cover;
+  }
+
+  .alert {
+    color: red;
+  }
+
+  h1{
+    font-size: 80px;
+    border:none;
+    border-radius: 20px;
+      background-color: black;
+      opacity: 0.8;
+    text-align: center;
+    font-family: 'Muli', sans-serif;
+    color: white;
+  }
+
+
+span{
+
+}
+
+
+button{
+  font-size: 20px;
+  margin: 30px;
+  padding: 30px;
+transform: translate(180px);
+color: white;
+background-color: rgba(255,84,0,0.84);
+opacity: 0.8;
+}
