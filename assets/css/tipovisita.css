@@ -1,0 +1,30 @@
+body{
+  background: url("../img/R7A4171.jpg")
+}
+
+h2{
+  background-color: black;
+  color: white;
+  opacity: 0.7;
+  border: solid 4px black;
+}
+.demo-card-wide > .mdl-card__title1{
+    color: #fff;
+    height: 176px;
+    background: url("../img/pqs-relaciones-clientes.jpg") center / cover;
+    background:cover;
+  }
+  .demo-card-wide > .mdl-card__menu {
+    color: #fff;
+  }
+.demo-card-wide {
+  width: 200px;
+  margin: 50px;
+
+}
+.demo-card-wide > .mdl-card__title2{
+  background: url("../img/organiza_tus_compras_reference.jpg") center / cover;
+background: cover;
+height: 176px;
+
+}
