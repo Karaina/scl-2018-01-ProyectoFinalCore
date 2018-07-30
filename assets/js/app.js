@@ -22,6 +22,7 @@ databaseRef.once('value', function(snapshot) {
   });
    
 function save_user(){
+    window.location.href = '../html/bienvenida.html'
     const first_name = document.getElementById('first_name').value;
     const last_name = document.getElementById('last_name').value;
     const emailValue = document.getElementById('email').value;

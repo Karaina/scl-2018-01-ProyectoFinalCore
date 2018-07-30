@@ -6,17 +6,20 @@ $(document).ready(function(){
 
 // Reedirección de vistas
 function register() {
-    window.location.href = "../html/tipoVisita.html";
+    window.location.href = "/assets/html/tipoVisita.html";
 }
 
 function cliente() {
     window.location.href = "../html/cliente.html";
 }
 
-function search() {
-    window.location.href = "../html/registrodatos.html"
+function proveeder() {
+    window.location.href = "../html/cliente.html";
 }
 
+function visita() {
+    window.location.href = "../html/cliente.html";
+}
 
 // Validar rut
 function checkRut(rut) {
@@ -70,6 +73,34 @@ function checkRut(rut) {
 }
 
 
+// Elegir empresa para visitar
+function search() {
+    let x = document.getElementById('selector').selectedIndex;
+    let y = document.getElementsByTagName('option')[x].value;
+    console.log(y);
+    
+    var data = {
+        empresa: y
+      };
+    
+      // Get a key for a new Post.
+      
+    
+      // Write the new post's data simultaneously in the posts list and the user's post list.
+      var updates = {};
+      updates['/users/' ] = data;
+      updates['/user-posts/'] = data;
+
+
+
+    var updates = {};
+    updates['/users/'] = data;
+  
+
+    window.location.href = "../html/registrodatos.html"
+}
+
+
 // Guardar datos en la data firebase
 function save_user(){
     const alerts = document.getElementById("alert");
@@ -78,14 +109,17 @@ function save_user(){
     const rut = document.getElementById('rut').value;
     const motivoVisita = document.getElementById('motivo').value;
 
+    // Si los campos estan vacios
     if(name, surname, rut, motivoVisita === '') {
-        alerts.innerHTML = `<p class= "alert">Debe llenar todos los campos, son obligatorios.</p>`;
+        alerts.innerHTML = `<p class="alert">Debe llenar todos los campos, son obligatorios.</p>`;
     }
 
+    // Obtener fecha y hora al momento de registrarse
     let date = new Date();
     let tiempo = date.getHours() + ":" + date.getMinutes();
-    let days = date.getDate() + "." + date.getMonth() + "." + date.getFullYear();
+    let days = date.getDate() + "." + (date.getMonth() +1) + "." + date.getFullYear();
 
+    // Se crea una nueva llave para guardar personas registradas
     var uid = firebase.database().ref().child('users').push().key;
   
     var data = {
