@@ -1,15 +1,42 @@
+*{
+  color: white;
+}
 body{
   background: url("../img/R7A4072.jpg")
+}
+h2{
+  background-color: black;
+  border-radius: 200px;
+  color: white;
+  width: 400px;
+  text-align: center;
+
+
 }
 
 table{
   background-color:black;
   color: white;
   width: 600px;
-  margin-left: 300px;
+  height: 600px;
+  margin-left: 400px;
+  margin-top: 30px;
+  opacity: 0.9;
+  border-radius: 50px;
+
 }
 
-img{
-  width: 200px;
-  height: 200px;
+
+td{
+  color: white;
+  font-size: 20px;
+
+}
+input{
+  background-color: black;
+  color:white;
+}
+
+button{
+  background-color: black;
 }
