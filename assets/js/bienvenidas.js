@@ -79,10 +79,13 @@ function checkRut(rut) {
 
 
 // Elegir empresa para visitar
-function getSelectedValue() {
-    let selectedValue = document.getElementById('selector').value;
-    console.log(selectedValue);
+function search() {
+    var x = document.getElementById('selector').selectedIndex;
+    var y = document.getElementsByTagName('option')[x].value;
+    console.log(y);
+    
 }
+
 
 // Guardar datos en la data firebase
 function save_user(){
@@ -92,14 +95,17 @@ function save_user(){
     const rut = document.getElementById('rut').value;
     const motivoVisita = document.getElementById('motivo').value;
 
+    // Si los campos estan vacios
     if(name, surname, rut, motivoVisita === '') {
-        alerts.innerHTML = `<p class= "alert">Debe llenar todos los campos, son obligatorios.</p>`;
+        alerts.innerHTML = `<p class="alert">Debe llenar todos los campos, son obligatorios.</p>`;
     }
 
+    // Obtener fecha y hora
     let date = new Date();
     let tiempo = date.getHours() + ":" + date.getMinutes();
     let days = date.getDate() + "." + date.getMonth() + "." + date.getFullYear();
 
+    // Se crea una nueva llave para guardar personas registradas
     var uid = firebase.database().ref().child('users').push().key;
   
     var data = {
@@ -108,6 +114,7 @@ function save_user(){
         apellido: surname,
         rut: rut,
         motivo: motivoVisita,
+        empresa: selectedValue,
         hora: tiempo,
         fecha: days
     }
