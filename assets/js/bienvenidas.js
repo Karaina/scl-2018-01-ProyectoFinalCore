@@ -21,11 +21,6 @@ function visita() {
     window.location.href = "../html/cliente.html";
 }
 
-function search() {
-    window.location.href = "../html/registrodatos.html"
-}
-
-
 // Validar rut
 function checkRut(rut) {
     // Despejar Puntos
@@ -80,10 +75,10 @@ function checkRut(rut) {
 
 // Elegir empresa para visitar
 function search() {
-    var x = document.getElementById('selector').selectedIndex;
-    var y = document.getElementsByTagName('option')[x].value;
+    let x = document.getElementById('selector').selectedIndex;
+    let y = document.getElementsByTagName('option')[x].value;
     console.log(y);
-    
+    window.location.href = "../html/registrodatos.html"
 }
 
 
@@ -100,10 +95,10 @@ function save_user(){
         alerts.innerHTML = `<p class="alert">Debe llenar todos los campos, son obligatorios.</p>`;
     }
 
-    // Obtener fecha y hora
+    // Obtener fecha y hora al momento de registrarse
     let date = new Date();
     let tiempo = date.getHours() + ":" + date.getMinutes();
-    let days = date.getDate() + "." + date.getMonth() + "." + date.getFullYear();
+    let days = date.getDate() + "." + (date.getMonth() +1) + "." + date.getFullYear();
 
     // Se crea una nueva llave para guardar personas registradas
     var uid = firebase.database().ref().child('users').push().key;
@@ -114,7 +109,7 @@ function save_user(){
         apellido: surname,
         rut: rut,
         motivo: motivoVisita,
-        empresa: selectedValue,
+        //empresa: coso,
         hora: tiempo,
         fecha: days
     }
