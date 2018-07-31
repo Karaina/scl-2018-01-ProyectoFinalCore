@@ -1,7 +1,7 @@
 //Función para el selector de empresas del if
-$(document).ready(function(){
+/* $(document).ready(function(){
     $('select').formSelect();
-  });
+  }); */
 
 
 // Reedirección de vistas
@@ -100,7 +100,7 @@ function search() {
     window.location.href = "../html/registrodatos.html"
 }
 
-let ama = '';
+
 // Guardar datos en la data firebase
 function save_user(redirect){
     if(redirect == true) {
@@ -137,7 +137,9 @@ function save_user(redirect){
    updates['/users/' + uid] = data;
    firebase.database().ref().update(updates);
 
+
 }
   window.location.href = '../html/registrado.html';
+
 
 }

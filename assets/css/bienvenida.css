@@ -107,3 +107,18 @@ img{display: none;}
   opacity: 0.8;
   }
 }
+
+.demo-card-wide > .mdl-card__menu {
+  background-color:  #fff;
+}
+
+.mdl-button {
+  background-color: white;
+}
+
+.admin-icon {
+  max-width: 56px;
+  height: 56px;
+}
+
+
