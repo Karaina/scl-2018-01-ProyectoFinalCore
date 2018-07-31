@@ -12,15 +12,43 @@ function showVisits() {
     } 
 }
 
-const container = document.getElementById('cont');
+let container = document.getElementById('cont');
 var databaseRef = firebase.database().ref('users/');
 
 databaseRef.once('value', function(snapshot) {
     snapshot.forEach(function(childSnapshot) {
-   var childKey = childSnapshot.key;
-   var childData = childSnapshot.val();
-   container.innerHTML = `       
-    <p> ${childData.nombre} </p> `;
+        var childKey = childSnapshot.key;
+        var childData = childSnapshot.val();
+        let contenedor = document.getElementById('cont');
+        let divcreator = document.createElement('div');
+        divcreator.classList = 'divcreator';
+        let row = document.createElement('div');
+        row.classList = 'row';
+        let rowcreator = document.createElement('div');
+        rowcreator.classList = 'row';
+        let col12 = document.createElement('div');
+        col12.classList = 'col s12 texto';
+        let col6creator = document.createElement('div');
+        col6creator.classList = 'col s6';        
+        let pcreator = document.createElement('p');
+        let ptexto =  document.createElement('p');
+        let textcreator = document.createTextNode(childData.nombre + ' ' + childData.apellido);
+        let cololo6 = document.createElement('div');
+        cololo6.classList = 'col s6';
+        let pepe = document.createElement('p');
+        let popo = document.createElement('p');
+        let date = document.createTextNode(childData.hora);
+
+
+    pcreator.appendChild(textcreator);
+    row.appendChild(col12);
+    col12.appendChild(ptexto);        
+    col6creator.appendChild(pcreator);
+    rowcreator.appendChild(col6creator);
+    cololo6.appendChild(popo);
+    rowcreator.appendChild(cololo6);
+    contenedor.appendChild(rowcreator);        
+    contenedor.appendChild(row);
   });
 });  
 
