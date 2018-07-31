@@ -4,6 +4,6 @@ function timeout() {
 }
 
 function redirect() {
-    window.location.href = "../html/bienvenida.html"
+    window.location.href = "index.html"
     return;
 }
