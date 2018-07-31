@@ -43,7 +43,11 @@ Dentro de los tipos de visita que llegan a IF, se pueden resumir en tres:
 En base a las entrevistas, podemos sacar en limpio la información más relevante para implementarla en nuestro producto mínimo viable, como lo es la diferenciación del tipo de visita, la cual ayudará a tener un registro con información dirigido al tipo de visita. También se creará una base de datos en tiempo real, la cual solo tendrá acceso la administradora. Y otra de las funcionalidades a considerar para la aplicación, será añadir la opción de “visita frecuente” para evitar la duplicación de información y agilizar el proceso de registro de visitas.
 
 ### Sesiones de testing con sketch
-En base a lo observado en la primera dos sesiones de testing realizadas con sketch, existen cambios que se discutirán dentro del equipo para un posible cambio y/o mejora del producto. [Ver anexo para más detalles](https://docs.google.com/document/d/1KjwnXKIDFQJsWDixKZ2HQx8K1KnVxpc1bk6198jJkEE/edit?usp=sharing) Dentro de los posibles cambios se encuentran:
+En base a lo observado en la primera dos sesiones de testing realizadas con sketch, existen cambios que se discutirán dentro del equipo para un posible cambio y/o mejora del producto. 
+
+[Ver anexo para más detalles](https://docs.google.com/document/d/1KjwnXKIDFQJsWDixKZ2HQx8K1KnVxpc1bk6198jJkEE/edit?usp=sharing) 
+
+Dentro de los posibles cambios se encuentran:
 
 1. Poner la opción para devolverse al paso anterior y para regresar al menú principal.
 2. Resaltar el botón en la vista de “Seleccione el tipo de visita.”
@@ -80,7 +84,7 @@ Existirá un mensaje en el formulario de registro que informará al usuario que 
 ![solo vistas](https://user-images.githubusercontent.com/39053734/43492292-4c8cf034-94f6-11e8-8306-cfb3489631df.jpg)
 
 
-[Ir al prototipo de baja fidelidad](hhttps://docs.google.com/document/d/1TGjB8LnUxzNR2nyhny94shq71AW7ibaCDC2DBaEBqLo/edit?usp=sharing)
+[Ir al prototipo de baja fidelidad](https://docs.google.com/document/d/1TGjB8LnUxzNR2nyhny94shq71AW7ibaCDC2DBaEBqLo/edit?usp=sharing)
 
 [Ir a prototipo de alta fidelidad](https://marvelapp.com/project/3243774/)
 
