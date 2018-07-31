@@ -10,20 +10,20 @@ Es por esto, que presentamos una aplicación que ayudará al visitante de IF a i
 
 ## Investigación
 
-Para la realización de esta aplicación, se hicieron entrevistas a los trabajadores de IF Blanco, con el objetivo de entender el funcionamiento del sistema de registro de visita e identificar los principales problemas que tiene el actual sistema de registro. [ver anexo para más detalles](https://docs.google.com/document/d/1_vKxt6RkvePqrdIW02hymERu9JQm1Df-DNXSCinvoeY/edit?usp=sharing) En paralelo, también se hizo un [mapa de usuario](https://docs.google.com/document/d/1FXBEQzjznU85llF_xh61bDeHdEB6hO9osCf-X8cCmFI/edit?usp=sharing) para entender su comportamiento frente al actual sistema de registro de visitas. 
+Para la realización de esta aplicación, se hicieron entrevistas a los trabajadores de IF Blanco, con el objetivo de entender el funcionamiento del sistema de registro de visita e identificar los principales problemas que tiene el actual sistema de registro. [ver anexo para más detalles](https://docs.google.com/document/d/1_vKxt6RkvePqrdIW02hymERu9JQm1Df-DNXSCinvoeY/edit?usp=sharing) En paralelo, también se hizo un [mapa de usuario](https://docs.google.com/document/d/1FXBEQzjznU85llF_xh61bDeHdEB6hO9osCf-X8cCmFI/edit?usp=sharing) para entender el comportamiento del visitante frente al actual sistema de registro de visitas. 
 
 ### Datos más relevantes
-En primer lugar, los datos que se obtuvieron en recepción nos permitió conocer el actual sistema de registro de visitas, el cual consiste en un excel que la recepcionista va autocompletando a medida que van llegando visitas. 
+En primer lugar, los datos que se obtuvieron en recepción nos permitió conocer el actual sistema de registro de visitas, el cual consiste en un excel que la recepcionista va completando a medida que van llegando visitas. 
 
 Los datos que obligatoriamente debe ingresar el recepcionista en el registro son los siguientes:
- * *Nombre
- * *Apellido
- * *Rut
- * *Motivo 
- * *Hora de ingreso 
- * *Hacia dónde se dirige
- * *¿Viene con compañía?
- * *¿Viene en auto/moto?
+ * Nombre
+ * Apellido
+ * Rut
+ * Motivo 
+ * Hora de ingreso 
+ * Hacia dónde se dirige
+ * ¿Viene con compañía?
+ * ¿Viene en auto/moto?
 
 (En el caso de que venga en un vehículo, la patente es otro dato obligatorio).
 (Lo mismo pasa en el caso de que venga con compañía. El usuario deberá escribir el nombre de su acompañante obligatoriamente).
@@ -35,9 +35,9 @@ Otra complicación que se producen en recepción al momento de registrar la visi
 Un dato que nos proporcionó la administradora es la importancia de obtener el correo electrónico o alguna otra información para ponerse en contacto con los posibles clientes de  IF Blanco. Además, algo que le parece relevante de incorporar en el formulario de registro es la comuna de procedencia de la visita y el tipo de institución que ingresará (publicidad, educación, tecnología, etc) para tener una idea de cuál es el público que más llega a IF. Y finalmente, sería útil tener acceso a esa base de datos para tener mayor control y conocimiento de la gente que ingresa a IF Blanco.
 
 Dentro de los tipos de visita que llegan a IF, se pueden resumir en tres:
-* 1.- Clientes que vienen a observar y/o arrendar un espacio en IF.
-* 2.- Proveedores que vienen a dejar entregas dentro de IF.
-* 3.- Visitantes a empresas que se encuentra dentro de IF. 
+1. Clientes que vienen a observar y/o arrendar un espacio en IF.
+2. Proveedores que vienen a dejar entregas dentro de IF.
+3. Visitantes a empresas que se encuentra dentro de IF. 
 
 ### Conclusiones: 
 En base a las entrevistas, podemos sacar en limpio la información más relevante para implementarla en nuestro producto mínimo viable, como lo es la diferenciación del tipo de visita, la cual ayudará a tener un registro con información dirigido al tipo de visita. También se creará una base de datos en tiempo real, la cual solo tendrá acceso la administradora. Y otra de las funcionalidades a considerar para la aplicación, será añadir la opción de “visita frecuente” para evitar la duplicación de información y agilizar el proceso de registro de visitas.
@@ -77,9 +77,10 @@ Existirá un mensaje en el formulario de registro que informará al usuario que 
 
 ## Proceso de Diseño
 
-![sketch](https://user-images.githubusercontent.com/39053734/43491964-b4e35e86-94f4-11e8-8730-4d396888b946.jpg)
+![solo vistas](https://user-images.githubusercontent.com/39053734/43492292-4c8cf034-94f6-11e8-8306-cfb3489631df.jpg)
 
-[Ir al prototipo de baja fidelidad](https://docs.google.com/document/d/1TGjB8LnUxzNR2nyhny94shq71AW7ibaCDC2DBaEBqLo/edit?usp=sharing)
+
+[Ir al prototipo de baja fidelidad](hhttps://docs.google.com/document/d/1TGjB8LnUxzNR2nyhny94shq71AW7ibaCDC2DBaEBqLo/edit?usp=sharing)
 
 [Ir a prototipo de alta fidelidad](https://marvelapp.com/project/3243774/)
 
