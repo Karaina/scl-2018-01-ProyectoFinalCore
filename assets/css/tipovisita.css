@@ -1,4 +1,54 @@
+body{
+  background: url("../img/R7A4171.jpg");
+  background-size: cover;
+}
+h1{
+  font-family: 'Muli', sans-serif;
+background-color: black;
+color: white;
+border: solid 4px black;
+opacity: 0.8;
+}
+h2{
+    font-family: 'Muli', sans-serif;
+  background-color: black;
+  color: white;
+  border: solid 4px black;
 
+}
+.demo-card-wide > .mdl-card__title1{
+
+    color: white;
+    height: 176px;
+    background: url("../img/pqs-relaciones-clientes.jpg") center / cover;
+    background:cover;
+  }
+  .demo-card-wide > .mdl-card__menu {
+    color: #fff;
+  }
+.demo-card-wide {
+  width: 300px;
+  margin: 50px;
+
+}
+
+.demo-card-wide > .mdl-card__title2{
+  background: url("../img/organiza_tus_compras_reference.jpg") center / cover;
+background: cover;
+height: 176px;
+color: white;
+
+}
+.demo-card-wide > .mdl-card__title3{
+  background: url("../img/IMG_0642.jpg");
+  height:176px;
+    background: cover;
+    color: white;
+}
+
+
+
+@media (min-width:800px) {
 body{
   background: url("../img/R7A4171.jpg");
 
@@ -37,4 +87,5 @@ color: white;
   height:176px;
     background: cover;
     color: white;
+}
 }

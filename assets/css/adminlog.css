@@ -1,0 +1,26 @@
+#cont {
+	border-radius: 0.4em;
+	margin: 0 auto;
+	color: rgb(255, 255, 255);
+	text-align: left;
+	margin-bottom: 6em;
+	padding: 0 16%;
+}
+
+#cont span {
+	margin-left: 1em;
+}
+
+#cont div {
+	padding: 1em 0.5em;
+	margin-bottom: 2em;
+	background-color: rgb(201, 135, 135);
+}
+
+.visitPhoto {
+	border: 4px solid rgb(165, 162, 162);
+	border-radius: 30px;
+	background-color: rgb(211, 214, 218);
+    width: 100px;
+    height: 77px;
+}
