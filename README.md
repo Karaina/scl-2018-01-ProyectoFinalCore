@@ -93,6 +93,7 @@ Existirá un mensaje en el formulario de registro que informará al usuario que 
 ## Planificación del proyecto
 
 Para la planificación de este proyecto, se utilizó la herramienta trello.
+
 [Ir a planificación](https://trello.com/b/WiEWhekW/proyecto-final-common-core)
 
 
