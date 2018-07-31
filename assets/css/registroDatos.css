@@ -2,6 +2,55 @@
   color: white;
 }
 body{
+  background: url("../img/R7A4072.jpg");
+  background-size: contain;
+}
+h2{
+  background-color: black;
+  border-radius: 200px;
+  color: white;
+  width: 400px;
+  text-align: center;
+
+
+}
+
+table{
+  background-color:black;
+  color: white;
+  width: 600px;
+  height: 800px;
+  margin-left: 100px;
+  margin-top: 50px;
+  opacity: 0.9;
+  border-radius: 50px;
+
+
+}
+
+
+td{
+  color: white;
+  font-size: 30px;
+
+}
+input{
+  background-color: black;
+  color:white;
+  font-size: 25px;
+}
+
+button{
+  background-color: black;
+}
+
+
+
+@media (min-width:800px) {
+*{
+  color: white;
+}
+body{
   background: url("../img/R7A4072.jpg")
 }
 h2{
@@ -39,4 +88,4 @@ input{
 
 button{
   background-color: black;
-}
+}}
