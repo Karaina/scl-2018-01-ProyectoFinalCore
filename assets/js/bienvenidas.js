@@ -24,14 +24,14 @@ function visita() {
 // Validar rut
 function checkRut(rut) {
     // Despejar Puntos
-    let valor = rut.value.replace('.',''); 
+    let valor = rut.value.replace('.','');
     // Despejar Guión
     valor = valor.replace('-','');
-    
+
     // Aislar Cuerpo y Dígito Verificador
     cuerpo = valor.slice(0,-1);
     dv = valor.slice(-1).toUpperCase();
-    
+
     // Formatear RUN
     rut.value = cuerpo + '-'+ dv
 
@@ -39,35 +39,35 @@ function checkRut(rut) {
     if(cuerpo.length < 7) {
         rut.setCustomValidity("RUT Incompleto");
         return false;}
-    
+
     // Calcular Dígito Verificador
     suma = 0;
     multiplo = 2;
-    
+
     // Para cada dígito del Cuerpo
-    for(i=1;i<=cuerpo.length;i++) {    
+    for(i=1;i<=cuerpo.length;i++) {
         // Obtener su Producto con el Múltiplo Correspondiente
-        index = multiplo * valor.charAt(cuerpo.length - i);        
+        index = multiplo * valor.charAt(cuerpo.length - i);
         // Sumar al Contador General
-        suma = suma + index;       
+        suma = suma + index;
         // Consolidar Múltiplo dentro del rango [2,7]
         if(multiplo < 7) {
             multiplo = multiplo + 1;
         } else {
             multiplo = 2;
-        }  
-    }    
+        }
+    }
     // Calcular Dígito Verificador en base al Módulo 11
     dvEsperado = 11 - (suma % 11);
-    
+
     // Casos Especiales (0 y K)
     dv = (dv == 'K')?10:dv;
     dv = (dv == 0)?11:dv;
-    
+
     // Validar que el Cuerpo coincide con su Dígito Verificador
     if(dvEsperado != dv) {rut.setCustomValidity("RUT Inválido");
     return false;
-}   
+}
     // Si todo sale bien, eliminar errores (decretar que es válido)
     rut.setCustomValidity('');
 }
@@ -78,14 +78,14 @@ function search() {
     let x = document.getElementById('selector').selectedIndex;
     let y = document.getElementsByTagName('option')[x].value;
     console.log(y);
-    
+
     var data = {
         empresa: y
       };
-    
+
       // Get a key for a new Post.
-      
-    
+
+
       // Write the new post's data simultaneously in the posts list and the user's post list.
       var updates = {};
       updates['/users/' ] = data;
@@ -95,7 +95,7 @@ function search() {
 
     var updates = {};
     updates['/users/'] = data;
-  
+
 
     window.location.href = "../html/registrodatos.html"
 }
@@ -103,7 +103,7 @@ function search() {
 
 // Guardar datos en la data firebase
 function save_user(redirect){
-    if(redirect == true) { 
+    if(redirect == true) {
     const alerts = document.getElementById("alert");
     const name = document.getElementById('first_name').value;
     const surname = document.getElementById('last_name').value;
@@ -122,7 +122,7 @@ function save_user(redirect){
 
     // Se crea una nueva llave para guardar personas registradas
     var uid = firebase.database().ref().child('users').push().key;
-  
+
     var data = {
     user_id: uid,
         nombre: name,
@@ -132,29 +132,14 @@ function save_user(redirect){
         hora: tiempo,
         fecha: days
     }
-   
+
    var updates = {};
    updates['/users/' + uid] = data;
    firebase.database().ref().update(updates);
 
-   const container = document.getElementById('cont');
-var databaseRef = firebase.database().ref('users/');
 
-databaseRef.once('value', function(snapshot) {
-    snapshot.forEach(function(childSnapshot) {
-   var childKey = childSnapshot.key;
-   var childData = childSnapshot.val();
-   container.innerHTML = `
-   <div class="container">
-        <div class="row">
-            <div class="col s12">
-                <p>${childData.nombre}</p>
-            </div>
-        </div>
-   </div>`;
-  });
-});
 }
-   window.location.href = '/assets/html/registrado.html';
-  
+  window.location.href = '../html/registrado.html';
+
+
 }
