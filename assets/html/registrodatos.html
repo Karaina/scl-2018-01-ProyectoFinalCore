@@ -33,6 +33,20 @@
             </tr>
             <td>
               <input type="button"  value="Save" onclick="save_user() ;"/>
+             
+<!-- Modal Trigger -->
+<a class="waves-effect waves-light btn modal-trigger" onclick="snapphoto()" href="#modal1">Modal</a>
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal">
+                <div class="modal-content">
+                        <video id="video"></video>
+                        <canvas id="canvas"></canvas> <br>
+                        <button onclick="snap();">SNAP</button>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                </div>
+                </div>
             </td>
            </table>
 
@@ -54,5 +68,6 @@
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
         <script src="../js/bienvenidas.js"></script>
+        <script src="../js/cam.js"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+function snapphoto() {  
 var video = document.getElementById('video');
 var canvas = document.getElementById('canvas');
 var context = canvas.getContext('2d');
@@ -16,7 +17,7 @@ function streamWebCam (stream) {
 
 function throwError (e) {
     alert(e.name);
-}
+} }
 
 function snap() {
     canvas.width = video.clientWidth;

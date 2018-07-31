@@ -2,7 +2,10 @@
 /* $(document).ready(function(){
     $('select').formSelect();
   }); */
-
+  $(document).ready(function(){
+    $('.modal').modal();
+  });
+       
 
 // Reedirección de vistas
 function register() {
