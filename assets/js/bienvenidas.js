@@ -1,7 +1,7 @@
 //Función para el selector de empresas del if
-$(document).ready(function(){
+/* $(document).ready(function(){
     $('select').formSelect();
-  });
+  }); */
 
 
 // Reedirección de vistas
@@ -100,7 +100,7 @@ function search() {
     window.location.href = "../html/registrodatos.html"
 }
 
-let ama = '';
+
 // Guardar datos en la data firebase
 function save_user(redirect){
     if(redirect == true) { 
@@ -136,6 +136,24 @@ function save_user(redirect){
    var updates = {};
    updates['/users/' + uid] = data;
    firebase.database().ref().update(updates);
+
+   const container = document.getElementById('cont');
+var databaseRef = firebase.database().ref('users/');
+
+databaseRef.once('value', function(snapshot) {
+    snapshot.forEach(function(childSnapshot) {
+   var childKey = childSnapshot.key;
+   var childData = childSnapshot.val();
+   container.innerHTML = `
+   <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <p>${childData.nombre}</p>
+            </div>
+        </div>
+   </div>`;
+  });
+});
 }
    window.location.href = '/assets/html/registrado.html';
   
