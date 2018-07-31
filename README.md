@@ -10,7 +10,8 @@ Es por esto, que presentamos una aplicación que ayudará al visitante de IF a i
 
 ## Investigación
 
-Para la realización de esta aplicación, se hicieron entrevistas a los trabajadores de IF Blanco, con el objetivo de entender el funcionamiento del sistema de registro de visita e identificar los principales problemas que tiene el actual sistema de registro. [ver anexo para más detalles](https://docs.google.com/document/d/1_vKxt6RkvePqrdIW02hymERu9JQm1Df-DNXSCinvoeY/edit?usp=sharing) En paralelo, también se hizo un [mapa de usuario](https://docs.google.com/document/d/1FXBEQzjznU85llF_xh61bDeHdEB6hO9osCf-X8cCmFI/edit?usp=sharing) para entender el comportamiento del visitante frente al actual sistema de registro de visitas. 
+Para la realización de esta aplicación, se hicieron entrevistas a los trabajadores de IF Blanco, con el objetivo de entender el funcionamiento del sistema de registro de visita e identificar los principales problemas que tiene el actual sistema de registro. [ver anexo para más detalles](https://docs.google.com/document/d/1_vKxt6RkvePqrdIW02hymERu9JQm1Df-DNXSCinvoeY/edit?usp=sharing) 
+En paralelo, también se hizo un [mapa de usuario](https://docs.google.com/document/d/1FXBEQzjznU85llF_xh61bDeHdEB6hO9osCf-X8cCmFI/edit?usp=sharing) para entender el comportamiento del visitante frente al actual sistema de registro de visitas. 
 
 ### Datos más relevantes
 En primer lugar, los datos que se obtuvieron en recepción nos permitió conocer el actual sistema de registro de visitas, el cual consiste en un excel que la recepcionista va completando a medida que van llegando visitas. 
