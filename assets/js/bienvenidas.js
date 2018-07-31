@@ -10,7 +10,7 @@ function register() {
 }
 
 function cliente() {
-    window.location.href = "../html/cliente.html";
+    window.location.href = "../html/registrodatos.html";
 }
 
 function proveeder() {
@@ -79,31 +79,13 @@ function search() {
     let y = document.getElementsByTagName('option')[x].value;
     console.log(y);
 
-    var data = {
-        empresa: y
-      };
-
-      // Get a key for a new Post.
-
-
-      // Write the new post's data simultaneously in the posts list and the user's post list.
-      var updates = {};
-      updates['/users/' ] = data;
-      updates['/user-posts/'] = data;
-
-
-
-    var updates = {};
-    updates['/users/'] = data;
-
-
     window.location.href = "../html/registrodatos.html"
 }
 
 
 // Guardar datos en la data firebase
-function save_user(redirect){
-    if(redirect == true) {
+function save_user(){
+
     const alerts = document.getElementById("alert");
     const name = document.getElementById('first_name').value;
     const surname = document.getElementById('last_name').value;
@@ -137,9 +119,7 @@ function save_user(redirect){
    updates['/users/' + uid] = data;
    firebase.database().ref().update(updates);
 
-
-}
-  window.location.href = '../html/registrado.html';
-
+   console.log('registrado exitoso');
+   
 
 }

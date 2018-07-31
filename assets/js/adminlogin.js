@@ -33,43 +33,23 @@ databaseRef.once('value', function(snapshot) {
         let pcreator = document.createElement('p');
         let ptexto =  document.createElement('p');
         let textcreator = document.createTextNode(childData.nombre + ' ' + childData.apellido);
-        let cololo6 = document.createElement('div');
-        cololo6.classList = 'col s6';
-        let pepe = document.createElement('p');
-        let popo = document.createElement('p');
         let date = document.createTextNode(childData.hora);
+        let company = document.createTextNode("empresa");
 
-
+        
+        pcreator.appendChild(date);
     pcreator.appendChild(textcreator);
+    pcreator.appendChild(company);
     row.appendChild(col12);
     col12.appendChild(ptexto);        
     col6creator.appendChild(pcreator);
     rowcreator.appendChild(col6creator);
-    cololo6.appendChild(popo);
-    rowcreator.appendChild(cololo6);
     contenedor.appendChild(rowcreator);        
     contenedor.appendChild(row);
   });
 });  
 
 
-var tblUsers = document.getElementById('tbl_users_list');
-  var databaseRef = firebase.database().ref('users/');
-  var rowIndex = 1;
-  
-  databaseRef.once('value', function(snapshot) {
-    snapshot.forEach(function(childSnapshot) {
-   var childKey = childSnapshot.key;
-   var childData = childSnapshot.val();
-   
-   var row = tblUsers.insertRow(rowIndex);
-   var cellId = row.insertCell(0);
-   var cellName = row.insertCell(1);
-   cellId.appendChild(document.createTextNode(childKey));
-   cellName.appendChild(document.createTextNode(childData.nombre));
-   
-   rowIndex = rowIndex + 1;
-    });
-  });
+
 
    
