@@ -87,7 +87,7 @@ Existirá un mensaje en el formulario de registro que informará al usuario que 
 
 [Ir al prototipo de baja fidelidad](https://docs.google.com/document/d/1TGjB8LnUxzNR2nyhny94shq71AW7ibaCDC2DBaEBqLo/edit?usp=sharing)
 
-[Ir a prototipo de alta fidelidad](https://marvelapp.com/project/3243774/)
+[Ir a prototipo de alta fidelidad](https://www.figma.com/file/IRUHWHV0mNStMOQxQ8FlQiNC/Untitled?node-id=0%3A1)
 
 
 ## Planificación del proyecto
