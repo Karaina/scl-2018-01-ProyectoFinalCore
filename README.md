@@ -87,6 +87,7 @@ Existirá un mensaje en el formulario de registro que informará al usuario que 
 
 [Ir al prototipo de baja fidelidad](https://docs.google.com/document/d/1TGjB8LnUxzNR2nyhny94shq71AW7ibaCDC2DBaEBqLo/edit?usp=sharing)
 
+![figma](https://user-images.githubusercontent.com/39053734/43532801-58a0b3b6-9581-11e8-9e7a-6b6c1b377bb1.png)
 [Ir a prototipo de alta fidelidad](https://www.figma.com/file/IRUHWHV0mNStMOQxQ8FlQiNC/Untitled?node-id=0%3A1)
 
 
